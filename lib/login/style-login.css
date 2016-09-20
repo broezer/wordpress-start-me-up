@@ -1,0 +1,28 @@
+body.login{
+  background:#FFF;
+}
+
+#login{
+  padding: 5% 0 0;
+}
+
+.login h1 a{
+  width: 300px;
+  height: 70px;
+  -webkit-background-size: 300px;
+  background-size: contain;
+  padding-bottom:20px;
+}
+
+.login .message{
+  border-left: 4px solid #BA77FE;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover{
+  color: #000;
+}
+
+.login h1 a {
+    background-image: url(../../assets/images/site-login-logo.png);
+
+}

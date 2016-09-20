@@ -1,0 +1,31 @@
+{
+  "name": "wordpress-start-me-up",
+  "authors": [
+    "Bruce Moerdjiman <bruce@moerdjiman.com>"
+  ],
+  "description": "Simple Wordpress Starter Theme using NPM.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "WordPress",
+    "Gulp",
+    "BrowserSync",
+    "Bower",
+    "Sass"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bourbon": "~4.2.7"
+  },
+  "dependencies": {
+    "jquery": "~3.1.0"
+  }
+}
