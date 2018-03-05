@@ -1,8 +1,3 @@
-(function($){
-
-  $(document).ready(function(){
-    console.log('Hello World');
-  });
-
-
-})(jQuery);
+document.addEventListener("DOMContentLoaded",function(){
+	console.log('Hello World');
+});

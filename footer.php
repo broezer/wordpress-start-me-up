@@ -14,18 +14,11 @@
   $hostname = $_SERVER['HTTP_HOST']; // For local development
   if ($hostname == 'start-me-up:8888'  ): //Set hostname as provided
 ?>
-<!-- bower:js -->
-<script src="<?php echo get_template_directory_uri(); ?>/bower_components/jquery/dist/jquery.js"></script>
-<!-- endbower -->
 
 <!-- custom:js -->
 <script src="<?php echo get_template_directory_uri(); ?>/src/js/main.js"></script>
 <!-- endcustom -->
-
 <?php else:?>
-<!-- vendor:js -->
-<script src="<?php echo get_template_directory_uri(); ?>/scripts/vendor.js"></script>
-<!-- endvendor -->
 
 <!-- custom-min:js -->
 <script src="<?php echo get_template_directory_uri(); ?>/scripts/script.js"></script>
