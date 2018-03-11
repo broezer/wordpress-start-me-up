@@ -24,9 +24,13 @@ gulp.task('serve', function() {
     });
     gulp.watch('./src/scss/**/*.scss', ['sass']);
     gulp.watch('./dist/main.css', ['css']);
+		gulp.watch('./src/js/**/*.js',  ['js']);
     gulp.watch('./**/*.php').on('change', browserSync.reload);
     gulp.watch('./dist/**/*.css').on('change', browserSync.reload);
-    gulp.watch('./src/js/**/*.js', {cwd: './'},  ['inject-js']);
+		gulp.watch('./dist/**/*.js').on('change', browserSync.reload);
+
+    //gulp.watch('./src/js/**/*.js', {cwd: './'},  ['inject-js']);
+
 });
 
 gulp.task('sass', function () {

@@ -16,21 +16,6 @@
 
 	<?php wp_head(); ?>
 
-	<?php
-	  $hostname = $_SERVER['HTTP_HOST']; // For local development
-	  if ($hostname == 'start-me-up:8888'  ): //Set hostname as provided
-	?>
-	<!-- bower:css -->
-	<!-- endbower -->
-
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/dev.css" />
-	<?php else:?>
-
-	<!-- vendor:css -->
-	<!-- endvendor -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/main.min.css" />
-	<?php endif;?>
-
 </head>
 
 <body <?php body_class(); ?>>
