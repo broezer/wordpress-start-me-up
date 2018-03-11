@@ -1,5 +1,5 @@
 
-var localHost= 'start-me-up.test';
+var localHost= 'wp-start.test';
 
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
@@ -53,15 +53,16 @@ gulp.task('css', function(){
         .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('js', function(){
+    gulp.src('./src/js/main.js')
+        .pipe(uglify())
+				.pipe(rename('main.min.js'))
+        .pipe(gulp.dest('./dist'));
+});
 
+/*
 gulp.task('inject-js', function(){
-    var wiredepJs = wiredep().js;
-    if(wiredepJs){
-      var js = gulp.src(wiredep().js);
-    }else{
-      var js = gulp.src([]);
-    }
-
+    var js = gulp.src([]);
     gulp.src('./footer.php')
     //Custom JS
       .pipe(inject(gulp.src('./src/js/*.js'),
@@ -78,5 +79,6 @@ gulp.task('inject-js', function(){
       .pipe(replace(/(\/scripts\/script)/g, '<?php echo get_template_directory_uri(); ?>$1'))
       .pipe(gulp.dest('./'));
 });
+*/
 
-gulp.task('default', ['sass', 'css', 'inject-js', 'serve']);
+gulp.task('default', ['sass', 'css', 'js', 'serve']);

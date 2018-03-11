@@ -10,20 +10,6 @@
 
 <?php wp_footer(); ?>
 
-<?php
-  $hostname = $_SERVER['HTTP_HOST']; // For local development
-  if ($hostname == 'start-me-up:8888'  ): //Set hostname as provided
-?>
-
-<!-- custom:js -->
-<script src="<?php echo get_template_directory_uri(); ?>/src/js/main.js"></script>
-<!-- endcustom -->
-<?php else:?>
-
-<!-- custom-min:js -->
-<script src="<?php echo get_template_directory_uri(); ?>/scripts/script.js"></script>
-<!-- endcustom-min -->
-<?php endif;?>
 
 <script>
   //Google Analytics Code - Replace 'UA-XXXXXX-X'
