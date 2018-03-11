@@ -27,8 +27,8 @@ add_action('wp_enqueue_scripts', 'main_styles'); // Add Theme Stylesheet
 
 //Load scripts
 function main_footer_scripts() {
-	wp_register_script('main-js', get_stylesheet_directory_uri()  . '/dist/main.min.js', '', '', '');
-  wp_enqueue_script('custom');
+	wp_register_script('main-js', get_stylesheet_directory_uri()  . '/dist/main.min.js', false);
+  wp_enqueue_script('main-js');
 }
 add_action('init', 'main_footer_scripts'); // Add Custom Scripts to wp_footer
 
